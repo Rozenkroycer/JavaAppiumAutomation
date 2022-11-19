@@ -1,1 +1,1 @@
-# JavaAppiumAutomation
+# Java Appium Automation

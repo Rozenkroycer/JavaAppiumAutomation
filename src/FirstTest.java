@@ -97,6 +97,41 @@ public class FirstTest {
     }
 
     @Test
+    public void testCancelSearchResult(){
+
+        waitForElementAndClick(
+                By.id("org.wikipedia:id/search_container"),
+                "Cannot find 'Search Wikipedia' input",
+                5
+        );
+
+        waitForElementAndSendKeys(
+                By.xpath("//*[contains(@text,'Search…')]"),
+                "Java",
+                "Cannot find search input",
+                5
+        );
+
+        int elements_count = driver.findElements(By.id("org.wikipedia:id/page_list_item_container")).size();
+        Assert.assertNotEquals(
+                elements_count,
+                0
+        );
+
+        waitForElementAndClick(
+                By.id("org.wikipedia:id/search_close_btn"),
+                "Cannot find 'X' to cancel search",
+                5
+        );
+
+        waitForElementNotPresent(
+                By.id("org.wikipedia:id/page_list_item_container"),
+                "Search result block is still present on the page",
+                5
+        );
+    }
+
+    @Test
     public void testCompareArticleTitle(){
         waitForElementAndClick(
                 By.xpath("//*[contains(@text,'Search Wikipedia')]"),

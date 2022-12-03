@@ -22,6 +22,7 @@ public class FirstTest {
     private AppiumDriver driver;
 
     @Before
+
     public void setUp() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
@@ -34,7 +35,11 @@ public class FirstTest {
         capabilities.setCapability("app", "/Users/pavelbulic/Documents/GitHub/JavaAppiumAutomation/apks/org.wikipedia.apk");
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+
+        driver.rotate(ScreenOrientation.PORTRAIT);
     }
+
+
 
     @After
     public void tearDown() {

@@ -144,14 +144,18 @@ public class MainPageObject {
         return element.getText();
     }
 
-    public WebElement assertElementPresent (String locator, String error_message) {
-        return waitForElementPresent(locator, error_message, 0);
+    public void assertElementPresent (String locator, String error_message){
+        By by = this.getLocatorByString(locator);
+        boolean result = driver.findElement(by).isDisplayed();
+        if (!result){
+            throw new AssertionError(error_message);
+        }
     }
 
     private By getLocatorByString(String locator_with_type){
-        String[] exploted_locator = locator_with_type.split(Pattern.quote(":"), 2);
-        String by_type = exploted_locator[0];
-        String locator = exploted_locator[1];
+        String[] explored_locator = locator_with_type.split(Pattern.quote(":"), 2);
+        String by_type = explored_locator[0];
+        String locator = explored_locator[1];
 
         if (by_type.equals("xpath")) {
             return By.xpath(locator);

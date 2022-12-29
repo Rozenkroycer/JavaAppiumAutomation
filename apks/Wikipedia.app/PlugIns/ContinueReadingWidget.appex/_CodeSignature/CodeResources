@@ -12,25 +12,17 @@
 		<data>
 		0MIPa0qiDjReRwwobTsnJ01z+l0=
 		</data>
-		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib/objects-13.0+.nib</key>
+		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib</key>
 		<data>
-		p2lkz3HVV0u3tyg19+W92wQMPPs=
+		bMg1hW+qXlrCQA8PBvq3MTLxFyw=
 		</data>
-		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib/runtime.nib</key>
+		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib</key>
 		<data>
-		f+Ni/jqXQYYoP8/T2hNa1DFThFA=
-		</data>
-		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib/objects-13.0+.nib</key>
-		<data>
-		ZxtIsusDwhsWvnzF819UYOAt2No=
-		</data>
-		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib/runtime.nib</key>
-		<data>
-		dhU30SidXPi7kStDQvK7+LaeFgU=
+		WIcNPfYQNR29DirP3NOTyzUN5jE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qnNBoY9gX7pltd0ErXG2iE9JkgY=
+		5Yj5rXM6++GBWN9+W9VX12LzF4U=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<dict>
@@ -58,32 +50,18 @@
 			sOic6ugSKWwGvBSX5ZyYEUE+pFecCWW0YXAo5CNbmCQ=
 			</data>
 		</dict>
-		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib/objects-13.0+.nib</key>
+		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CP5l7+uNmH79MtFH3tCEKQuA7h1zrEumhNImt4NxegU=
+			BkIvmhPYE93ldvoOkddUjmGtjYdVQvziSGr9Vl3QcIQ=
 			</data>
 		</dict>
-		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib/runtime.nib</key>
+		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9D0cVfyqQyRanUS9SMeuJ86gttV02DRqSQ62OQsuWdw=
-			</data>
-		</dict>
-		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VP+BBp3y8eM+J7rdON4kZhTJHLhXYjZER134NHIvtqs=
-			</data>
-		</dict>
-		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			AKcJXz7P5Clo+nQ2R5J624kGDrIFwSE02KnhRJc2mME=
+			8qwi2c3eeGtm/QFM26GpJQbdeBd6dS9oWKz9suC81G0=
 			</data>
 		</dict>
 		<key>en.lproj/InfoPlist.strings</key>

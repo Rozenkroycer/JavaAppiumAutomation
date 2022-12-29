@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		XMKRxNF6DfWqoUJ3qUUqa8spVP0=
+		G9omiggk1Seqe69Jg8GnXrmt1IA=
 		</data>
 		<key>Base.lproj/InfoPlist.strings</key>
 		<data>
@@ -16,25 +16,17 @@
 		<data>
 		0MIPa0qiDjReRwwobTsnJ01z+l0=
 		</data>
-		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib/objects-13.0+.nib</key>
+		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib</key>
 		<data>
-		D3ChytttkkiXb6ivJUmNd9zrLmg=
+		Mj+UqIePeD3fZVvbBtO1DovMmmU=
 		</data>
-		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib/runtime.nib</key>
+		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib</key>
 		<data>
-		Qf8DN9ImGJluAieBBt6dSqhkzOY=
-		</data>
-		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib/objects-13.0+.nib</key>
-		<data>
-		nfcGz0TrwrjOlEi1Ho/9M37YZMM=
-		</data>
-		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib/runtime.nib</key>
-		<data>
-		8wQUkOaBlh/GEyye36stmTFw6hc=
+		aaUtExK8wxGkTdbkloZytUecYPA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1+Rx1sMaYrRDk1Ytgrn4l9CTSf8=
+		e0yxPFRE6Nrsd+I0r6vgoQ7vsfc=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<dict>
@@ -52,7 +44,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hdLw6GOaiAIXulg/21gmhEdUbPbuZa6pJY0iMw30LDA=
+			D7U6ET56txgSMq9CjyUKmjg7UouKbzhTlGbO51elsng=
 			</data>
 		</dict>
 		<key>Base.lproj/InfoPlist.strings</key>
@@ -69,32 +61,18 @@
 			sOic6ugSKWwGvBSX5ZyYEUE+pFecCWW0YXAo5CNbmCQ=
 			</data>
 		</dict>
-		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib/objects-13.0+.nib</key>
+		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4vUHAU7CiKDkMJiKFx6+fzJWNuS0vIhScJdp3EfQ8zU=
+			ONjPdmODSX1OZ0ECOcmwXeSTBsYidjIV1LiIiTyL9uc=
 			</data>
 		</dict>
-		<key>Base.lproj/MainInterface.storyboardc/M4Y-Lb-cyx-view-S3S-Oj-5AN.nib/runtime.nib</key>
+		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			26hXwlrHEDQOjmTE/e/N6n9KU2nXcO5CIg7/wHS8XFE=
-			</data>
-		</dict>
-		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			l04wvONj/XzgNOKbvA5wsGoQS9vhsqzxPdQi5IGPV7s=
-			</data>
-		</dict>
-		<key>Base.lproj/MainInterface.storyboardc/UIViewController-M4Y-Lb-cyx.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			rseSW8g3oGz1Luw8P6spsksV6yFiy09fp2kdShiCPxE=
+			N+OywOVev2f3fzqdaCRA/HHE2cfI+yWpACpt9U+coOE=
 			</data>
 		</dict>
 		<key>en.lproj/InfoPlist.strings</key>

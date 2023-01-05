@@ -4,6 +4,8 @@ import io.appium.java_client.AppiumDriver;
 import lib.Platform;
 import org.openqa.selenium.WebElement;
 
+import java.util.concurrent.TimeUnit;
+
 abstract public class ArticlePageObject extends MainPageObject{
 
     protected static String
@@ -15,7 +17,9 @@ abstract public class ArticlePageObject extends MainPageObject{
         MY_LIST_NAME_INPUT,
         MY_LIST_OK_BUTTON,
         CLOSE_ARTICLE_BUTTON,
-        MY_LIST_BY_TITLE_TPL;
+        MY_LIST_BY_TITLE_TPL,
+        TAP_TO_GO_BACK_POPOVER,
+        W_BUTTON;
 
     private static String getListXPathByName(String name_of_folder) {
         return MY_LIST_BY_TITLE_TPL.replace("{LIST_TITLE}", name_of_folder);
@@ -133,5 +137,13 @@ abstract public class ArticlePageObject extends MainPageObject{
                 TITLE,
                 "Cannot find article title without waiting"
         );
+    }
+
+    public void addArticleToMySaved(){
+        this.waitForElementAndClick(OPTIONS_ADD_TO_MY_LIST_BUTTON, "Cannot find option to add article to reading list", 5);
+    }
+
+    public void returnToMain(){
+        this.waitForElementAndClick(W_BUTTON, "Cannot find 'W' button on the page", 5);
     }
 }

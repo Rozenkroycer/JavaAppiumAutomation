@@ -2,6 +2,7 @@ package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
+import lib.Platform;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -137,12 +138,30 @@ public class MainPageObject {
         int middle_y = (upper_y + lower_y) / 2;
 
         TouchAction action = new TouchAction(driver);
-        action
-                .press(right_x, middle_y)
-                .waitAction(150)
-                .moveTo(left_x, middle_y)
-                .release()
-                .perform();
+        action.press(right_x, middle_y);
+        action.waitAction(150);
+        /*
+        Realisation_1
+
+        if (Platform.getInstance().isAndroid()){
+           action.moveTo(left_x, middle_y);
+        } else {
+            int offset_x = (-1 * element.getSize().getWidth());
+            action.moveTo(offset_x, 0);
+        }
+        */
+        action.moveTo(left_x, middle_y);
+        action.release();
+        action.perform();
+
+        /*
+        Realisation_2
+        action.press(right_x, middle_y)
+            .waitAction(150)
+            .moveTo(left_x, middle_y)
+            .release()
+            .perform();
+         */
     }
 
     public int getAmountOfElements(String locator) {

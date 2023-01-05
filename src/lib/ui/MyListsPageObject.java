@@ -3,11 +3,13 @@ package lib.ui;
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 
-public class MyListsPageObject extends MainPageObject {
+abstract public class MyListsPageObject extends MainPageObject {
 
-    private static final String
-        FOLDER_BY_NAME_TPL = "xpath://*[@text='{FOLDER_NAME}']",
-        ARTICLE_BY_TITLE_TPL = "xpath://*[@text='{TITLE}']";
+    protected static String
+        FOLDER_BY_NAME_TPL,
+        SYNC_WINDOW_CLOSE_BUTTON,
+        DELETE_ARTICLE_BUTTON,
+        ARTICLE_BY_TITLE_TPL;
 
     private static String getFolderXPathByName(String name_of_folder){
         return FOLDER_BY_NAME_TPL.replace("{FOLDER_NAME}", name_of_folder);
@@ -67,5 +69,13 @@ public class MyListsPageObject extends MainPageObject {
                 "Cannot find article " + article_title + " in the current list",
                 5
         );
+    }
+
+    public void closeSyncWindow() {
+        this.waitForElementAndClick(SYNC_WINDOW_CLOSE_BUTTON, "Cannot find close button for sync window", 5);
+    }
+
+    public void clickOnDeleteArticleButton() {
+        this.waitForElementAndClick(DELETE_ARTICLE_BUTTON, "Cannot find delete article from my list button", 5);
     }
 }

@@ -1,41 +1,69 @@
 package tests;
 
 import lib.CoreTestCase;
+import lib.Platform;
 import lib.ui.ArticlePageObject;
 import lib.ui.MyListsPageObject;
 import lib.ui.NavigationUI;
 import lib.ui.SearchPageObject;
 import lib.ui.factories.ArticlePageObjectFactory;
+import lib.ui.factories.MyListsPageObjectFactory;
+import lib.ui.factories.NavigationUIFactory;
 import lib.ui.factories.SearchPageObjectFactory;
 import org.junit.Test;
 
 public class MyListsTests extends CoreTestCase {
 
+    private static final String name_of_folder = "Learning programming";
     @Test
-    public void testSaveFirstArticleToMyList(){
+    public void testSaveFirstArticleToMyList() throws InterruptedException {
 
         SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
         SearchPageObject.initSearchInput();
-        SearchPageObject.typeSearchLine("Java");
-        SearchPageObject.clickByArticleWithSubstring("Object-oriented programming language");
+        SearchPageObject.typeSearchLine("Appium");
+        SearchPageObject.clickByArticleWithSubstring("Automation for Apps");
 
         ArticlePageObject ArticlePageObject = ArticlePageObjectFactory.get(driver);
         ArticlePageObject.waitForTitleElement();
-        String article_title = ArticlePageObject.getArticleTitle();
-        String name_of_folder = "Learning programming";
-        ArticlePageObject.addArticleToMyList(name_of_folder);
-        ArticlePageObject.closeArticle();
 
-        NavigationUI NavigationUI = new NavigationUI(driver);
+        String article_title = ArticlePageObject.getArticleTitle();
+
+        if (Platform.getInstance().isAndroid()){
+            ArticlePageObject.addArticleToMyList(name_of_folder);
+        } else {
+            ArticlePageObject.closeArticle();
+            SearchPageObject.clickByArticleWithSubstring("Automation for Apps");
+            ArticlePageObject.addArticleToMySaved();
+        }
+
+        if (Platform.getInstance().isAndroid()){
+            ArticlePageObject.closeArticle();
+        } else {
+            ArticlePageObject.returnToMain();
+        }
+
+        NavigationUI NavigationUI = NavigationUIFactory.get(driver);
         NavigationUI.clickMyLists();
 
-        MyListsPageObject MyListPageObject = new MyListsPageObject(driver);
-        MyListPageObject.openFolderByName(name_of_folder);
+        MyListsPageObject MyListPageObject = MyListsPageObjectFactory.get(driver);
+
+        if (Platform.getInstance().isAndroid()){
+            MyListPageObject.openFolderByName(name_of_folder);
+        }
+
+        if (Platform.getInstance().isIOS()){
+            MyListPageObject.closeSyncWindow();
+        }
+
         MyListPageObject.swipeByArticleToDelete(article_title);
+
+        if (Platform.getInstance().isIOS()){
+            MyListPageObject.clickOnDeleteArticleButton();
+        }
     }
 
     @Test
-    public void testSaveTwoArticles() {
+    public void testSaveTwoArticles() throws InterruptedException {
         SearchPageObject SearchObject = SearchPageObjectFactory.get(driver);
         SearchObject.initSearchInput();
         String search_line = "Java";
@@ -60,10 +88,10 @@ public class MyListsTests extends CoreTestCase {
         ArticlePageObject.addArticleToCurrentList(name_of_folder);
         ArticlePageObject.closeArticle();
 
-        NavigationUI NavigationUI = new NavigationUI(driver);
+        NavigationUI NavigationUI = NavigationUIFactory.get(driver);
         NavigationUI.clickMyLists();
 
-        MyListsPageObject MyListPageObject = new MyListsPageObject(driver);
+        MyListsPageObject MyListPageObject = MyListsPageObjectFactory.get(driver);
         MyListPageObject.openFolderByName(name_of_folder);
         MyListPageObject.swipeByArticleToDelete(substring);
         MyListPageObject.waitForArticleToDisappearByTitle(substring);
